@@ -1,9 +1,7 @@
 from food_adn_drinks import ChickenSandwich, VeganSandwich, SteakAndCheeseSandwich, TunaSandwich
 from food_adn_drinks import EggAndCheeseSandwich, Coca_Cola, Fanta, Borjomi, Likani
 
-requests = []
-
-def add():
+def add(requests):
     while True:
         item = input('Select item: ')
         if item == '1':
@@ -28,8 +26,3 @@ def add():
             break
         else:
             print('incorrect input')
-
-add()
-
-for i in requests:
-    print(i.name)

@@ -18,9 +18,4 @@ def print_form2():
     print('Press 7 to add Fanta')
     print('Press 8 to add Borjomi')
     print('Press 9 to add Likani')
-    print('Press 0 to exit')
-
-
-
-
-print_form2()
+    print('Press 0 to main menu')
