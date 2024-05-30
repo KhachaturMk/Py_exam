@@ -36,4 +36,4 @@ def add(requests):
         elif item == '0':
             break
         else:
-            print('incorrect input')
+            print("Incorrect input, Let's choose a product")
