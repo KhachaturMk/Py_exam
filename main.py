@@ -1,6 +1,7 @@
 from request import add
 from print_forms import print_form1,print_form3,print_form4
 import pandas as pd
+from datetime import datetime
 
 requests = []
 
@@ -23,7 +24,7 @@ while True:
 
     if inp == '0':
         for request in requests:
-            df = pd.DataFrame([[request.name, request.price]])
-            df.to_csv('report.csv', header=['Product', 'Price(GEL)'], mode='a', index=False)
+            df = pd.DataFrame([[datetime.now().replace(microsecond=0), request.name, request.price]])
+            df.to_csv('report.csv', header=['Year_month_date_time', 'Product', 'Price_GEL'], mode='a', index=False)
         print('Exit')
         exit()
