@@ -19,3 +19,8 @@ def print_form2():
     print('Press 8 to add Borjomi')
     print('Press 9 to add Likani')
     print('Press 0 to main menu')
+    print('_______________________________________________')
+
+def print_form3():
+    print('_______________________________________________')
+    print('Your order includes:')

@@ -1,16 +1,15 @@
 from request import add
-from print_forms import print_form1, print_form2
+from print_forms import print_form1,print_form3
 
 requests = []
 
 while True:
     print_form1()
-    inp = input('Select: > ')
+    inp = input('Press here: -> ')
     if inp == '1':
-        print_form2()
         add(requests)
     if inp == '3':
-        print('Your order:')
+        print_form3()
         for i in requests:
             print(i.name, i.ingredients, i.price, 'GEL')
 
