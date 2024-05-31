@@ -6,10 +6,12 @@ from request import add
 from print_forms import print_form1,print_form3,print_form4
 import pandas as pd
 from datetime import datetime
+import random
 
 requests = []
 
 while True:
+    un_number = random.randint(10000,99999)
     print_form1()
     inp = input('Press here: -> ')
     if inp == '1':
@@ -30,7 +32,7 @@ while True:
         print('Total price:', total, 'GEL')
     if inp == '0':
         for request in requests:
-            df = pd.DataFrame([[datetime.now().replace(microsecond=0), request.name, request.price]])
-            df.to_csv('report.csv', header=['Year/month/date/time', 'Product', 'Price/GEL'], mode='a', index=False)
+            df = pd.DataFrame([[un_number, datetime.now().replace(microsecond=0), request.name, request.price]])
+            df.to_csv('report.csv', header=['Request', 'Year/month/date/time', 'Product', 'Price/GEL'], mode='a', index=False)
         print('Exit')
         exit()
