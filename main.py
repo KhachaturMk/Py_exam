@@ -30,6 +30,11 @@ while True:
             print(i.name, i.ingredients, i.price, 'GEL')
             total += i.price
         print('Total price:', total, 'GEL')
+    if inp == '4':
+        print_form4()
+        acc_nummer = input('Enter your account number: ->')
+#         try:
+
     if inp == '0':
         for request in requests:
             df = pd.DataFrame([[un_number, datetime.now().replace(microsecond=0), request.name, request.price]])
