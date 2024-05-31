@@ -1,4 +1,6 @@
-"""This is a touch terminal program for a fast food restaurant"""
+"""This is a touch terminal program for a fast food restaurant.
+You can choose and pay for your order without waiting for a cashier.
+Spend the saved time on things that are more important to you."""
 
 from request import add
 from print_forms import print_form1,print_form3,print_form4
@@ -26,7 +28,6 @@ while True:
             print(i.name, i.ingredients, i.price, 'GEL')
             total += i.price
         print('Total price:', total, 'GEL')
-
     if inp == '0':
         for request in requests:
             df = pd.DataFrame([[datetime.now().replace(microsecond=0), request.name, request.price]])
