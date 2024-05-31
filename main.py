@@ -19,8 +19,11 @@ while True:
             print('Your order list is empty')
     if inp == '3':
         print_form3()
+        total = 0
         for i in requests:
             print(i.name, i.ingredients, i.price, 'GEL')
+            total += i.price
+        print('Total price:', total, 'GEL')
 
     if inp == '0':
         for request in requests:
