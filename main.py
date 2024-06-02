@@ -2,14 +2,14 @@
 You can choose and pay for your order without waiting for a cashier.
 Spend the saved time on things that are more important to you."""
 
-from request import add
 from print_forms import print_form1,print_form3,print_form4
-import pandas as pd
+from pay import Payment, BogPayment, TbcPayment
 from datetime import datetime
+from request import add
+import pandas as pd
 import random
 
 requests = []
-
 while True:
     un_number = random.randint(10000,99999)
     print_form1()
@@ -34,10 +34,22 @@ while True:
         print_form4()
         acc_nummer = input('Enter your account number: ->')
 #         try:
+        if 'TB' in acc_nummer:
+            for request in requests:
+                TbcPayment.pay(request)
+                df = pd.DataFrame(
+                    [[un_number, datetime.now().replace(microsecond=0), request.name, request.price, TbcPayment.pay(request)]])
+                df.to_csv('report.csv', header=['Request', 'Year/month/date/time', 'Product', 'Price/GEL', 'Status'],
+                          mode='a', index=False)
+            print('Exit')
+            exit()
+
 
     if inp == '0':
         for request in requests:
-            df = pd.DataFrame([[un_number, datetime.now().replace(microsecond=0), request.name, request.price]])
-            df.to_csv('report.csv', header=['Request', 'Year/month/date/time', 'Product', 'Price/GEL'], mode='a', index=False)
+            df = pd.DataFrame(
+                [[un_number, datetime.now().replace(microsecond=0), request.name, request.price, 'Not paid']])
+            df.to_csv('report.csv', header=['Request', 'Year/month/date/time', 'Product', 'Price/GEL', 'Status'],
+                      mode='a', index=False)
         print('Exit')
         exit()
