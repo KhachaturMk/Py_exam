@@ -32,7 +32,7 @@ while True:
         print('Total price:', total, 'GEL')
     if inp == '4':
         print_form4()
-        acc_nummer = input('Enter your account number: ->')
+        acc_nummer = input('Enter IBAN account number: -> ')
         if len(acc_nummer) == 10 and 'GE' in acc_nummer[:2] and 'TB' in acc_nummer[4:6]:
             for request in requests:
                 TbcPayment.pay(request)

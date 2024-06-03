@@ -1,14 +1,13 @@
 class Payment:
     def pay(self):
-        text = 'Another pay'
-        return text
+        pass
 
 class TbcPayment(Payment):
     def pay(self):
-        text = 'TBC pay'
+        text = 'TBC_pay'
         return text
 
 class BogPayment(Payment):
     def pay(self):
-        text = 'BOG pay'
+        text = 'BOG_pay'
         return text
