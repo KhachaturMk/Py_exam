@@ -33,17 +33,28 @@ while True:
     if inp == '4':
         print_form4()
         acc_nummer = input('Enter your account number: ->')
-#         try:
-        if 'TB' in acc_nummer:
+        if len(acc_nummer) == 10 and 'GE' in acc_nummer[:2] and 'TB' in acc_nummer[4:6]:
             for request in requests:
                 TbcPayment.pay(request)
                 df = pd.DataFrame(
-                    [[un_number, datetime.now().replace(microsecond=0), request.name, request.price, TbcPayment.pay(request)]])
-                df.to_csv('report.csv', header=['Request', 'Year/month/date/time', 'Product', 'Price/GEL', 'Status'],
+                    [[un_number, datetime.now().replace(microsecond=0), request.name, request.price,
+                      TbcPayment.pay(request)]])
+                df.to_csv('report.csv',
+                          header=['Request', 'Year/month/date/time', 'Product', 'Price/GEL', 'Status'],
                           mode='a', index=False)
-            print('Exit')
+            print('Your order has been successfully paid')
             exit()
-
+        elif len(acc_nummer) == 10 and 'GE' in acc_nummer[:2] and 'BG' in acc_nummer[4:6]:
+            for request in requests:
+                BogPayment.pay(request)
+                df = pd.DataFrame(
+                    [[un_number, datetime.now().replace(microsecond=0), request.name, request.price,
+                      BogPayment.pay(request)]])
+                df.to_csv('report.csv',
+                          header=['Request', 'Year/month/date/time', 'Product', 'Price/GEL', 'Status'],
+                          mode='a', index=False)
+            print('Your order has been successfully paid')
+            exit()
 
     if inp == '0':
         for request in requests:
