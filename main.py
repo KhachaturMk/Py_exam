@@ -3,7 +3,7 @@ You can choose and pay for your order without waiting for a cashier.
 Spend the saved time on things that are more important to you."""
 
 from print_forms import print_form1,print_form3,print_form4
-from pay import Payment, BogPayment, TbcPayment
+from pay import BogPayment, TbcPayment
 from datetime import datetime
 from request import add
 import pandas as pd

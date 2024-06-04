@@ -1,5 +1,5 @@
-from food_adn_drinks import ChickenSandwich, VeganSandwich, SteakAndCheeseSandwich, TunaSandwich
-from food_adn_drinks import EggAndCheeseSandwich, Coca_Cola, Fanta, Borjomi, Likani
+from food_adn_drinks import ChickenSandwich, VeganSandwich, SteakAndCheeseSandwich
+from food_adn_drinks import TunaSandwich, EggAndCheeseSandwich, Coca_Cola, Fanta
 from print_forms import print_form2
 
 def add(requests):
@@ -27,12 +27,6 @@ def add(requests):
         elif item == '7':
             requests.append(Fanta)
             print(Fanta.name, 'is added in order')
-        elif item == '8':
-            requests.append(Borjomi)
-            print(Borjomi.name, 'is added in order')
-        elif item == '9':
-            requests.append(Likani)
-            print(Likani.name, 'is added in order')
         elif item == '0':
             break
         else:

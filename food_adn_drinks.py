@@ -11,5 +11,3 @@ TunaSandwich = FoodAndDrinks('Tuna Sandwich', 13, '(Tuna loaded sub with fresh v
 EggAndCheeseSandwich = FoodAndDrinks('Egg & Cheese Sandwich', 11, '(Poached egga and cheese, veggies with mayo sauce)')
 Coca_Cola = FoodAndDrinks('Coca Cola', 2, '(Carbonated soft drink)')
 Fanta = FoodAndDrinks('Fanta', 2, '(Carbonated soft drink)')
-Borjomi = FoodAndDrinks('Borjomi', 1, '(Mineral water)')
-Likani = FoodAndDrinks('Likani', 1, '(Mineral water)')
