@@ -33,7 +33,7 @@ while True:
     if inp == '4':
         print_form4()
         acc_nummer = input('Enter IBAN account number: -> ')
-        if len(acc_nummer) == 10 and 'GE' in acc_nummer[:2] and 'TB' in acc_nummer[4:6]:
+        if len(requests) > 0 and len(acc_nummer) == 10 and 'GE00TB' in acc_nummer[:6] and acc_nummer[6:].isdigit():
             for request in requests:
                 TbcPayment.pay(request)
                 df = pd.DataFrame(
@@ -44,7 +44,7 @@ while True:
                           mode='a', index=False)
             print('Your order has been successfully paid')
             exit()
-        elif len(acc_nummer) == 10 and 'GE' in acc_nummer[:2] and 'BG' in acc_nummer[4:6]:
+        elif len(requests) > 0 and len(acc_nummer) == 10 and 'GE00BG' in acc_nummer[:6] and acc_nummer[6:].isdigit():
             for request in requests:
                 BogPayment.pay(request)
                 df = pd.DataFrame(
