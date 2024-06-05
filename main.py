@@ -38,9 +38,9 @@ while True:
                 TbcPayment.pay(request)
                 df = pd.DataFrame(
                     [[un_number, datetime.now().replace(microsecond=0), request.name, request.price,
-                      TbcPayment.pay(request)]])
+                      TbcPayment.pay(request), acc_nummer]])
                 df.to_csv('report.csv',
-                          header=['Request', 'Year/month/date/time', 'Product', 'Price/GEL', 'Status'],
+                          header=['Request', 'Year/month/date/time', 'Product', 'Price', 'Status', 'IBAN'],
                           mode='a', index=False)
             print(f"Your order {un_number} has been successfully paid\nPlease, take the check")
             exit()
@@ -49,18 +49,17 @@ while True:
                 BogPayment.pay(request)
                 df = pd.DataFrame(
                     [[un_number, datetime.now().replace(microsecond=0), request.name, request.price,
-                      BogPayment.pay(request)]])
+                      BogPayment.pay(request), acc_nummer]])
                 df.to_csv('report.csv',
-                          header=['Request', 'Year/month/date/time', 'Product', 'Price/GEL', 'Status'],
+                          header=['Request', 'Year/month/date/time', 'Product', 'Price', 'Status', 'IBAN'],
                           mode='a', index=False)
             print(f"Your order {un_number} has been successfully paid\nPlease, take the check")
             exit()
-
     if inp == '0':
         for request in requests:
             df = pd.DataFrame(
-                [[un_number, datetime.now().replace(microsecond=0), request.name, request.price, 'Not paid']])
-            df.to_csv('report.csv', header=['Request', 'Year/month/date/time', 'Product', 'Price/GEL', 'Status'],
+                [[un_number, datetime.now().replace(microsecond=0), request.name, request.price, 'Not_paid', 'None']])
+            df.to_csv('report.csv', header=['Request', 'Year/month/date/time', 'Product', 'Price', 'Status', 'IBAN'],
                       mode='a', index=False)
         print('Exit')
         exit()
