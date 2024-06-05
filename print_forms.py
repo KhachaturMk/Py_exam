@@ -1,5 +1,7 @@
 from food_adn_drinks import ChickenSandwich, VeganSandwich, SteakAndCheeseSandwich
 from food_adn_drinks import TunaSandwich, EggAndCheeseSandwich, Coca_Cola, Fanta
+
+
 def print_form1():
     print('_______________________________________________')
     print("Welcome to Sandwich City! Let's start ordering!")
@@ -9,6 +11,7 @@ def print_form1():
     print('Press 4 to view order')
     print('Press 5 to pay')
     print('Press 0 to exit')
+
 
 def print_form2():
     print('_______________________________________________')
@@ -22,9 +25,11 @@ def print_form2():
     print('Press 0 to main menu')
     print('_______________________________________________')
 
+
 def print_form3():
     print('_______________________________________________')
     print('Your order includes:')
+
 
 def print_form4():
     print('_______________________________________________')

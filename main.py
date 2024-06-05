@@ -62,7 +62,7 @@ while True:
         for request in requests:
             df = pd.DataFrame(
                 [[un_number, datetime.now().replace(microsecond=0), request.name, request.price, 'Not_paid', 'None']])
-            df.to_csv('report.csv', header=['Request', 'Year/month/date/time', 'Product', 'Price', 'Status', 'IBAN'],
-                      mode='a', index=False)
+            df.to_csv('report.csv', header=['Request', 'Year/month/date/time', 'Product', 'Price',
+                                            'Status', 'IBAN'], mode='a', index=False)
         print('Exit')
         exit()
