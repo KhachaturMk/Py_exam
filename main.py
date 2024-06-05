@@ -42,7 +42,7 @@ while True:
                 df.to_csv('report.csv',
                           header=['Request', 'Year/month/date/time', 'Product', 'Price/GEL', 'Status'],
                           mode='a', index=False)
-            print('Your order has been successfully paid')
+            print(f"Your order {un_number} has been successfully paid\nPlease, take the check")
             exit()
         elif len(requests) > 0 and len(acc_nummer) == 10 and 'GE00BG' in acc_nummer[:6] and acc_nummer[6:].isdigit():
             for request in requests:
@@ -53,7 +53,7 @@ while True:
                 df.to_csv('report.csv',
                           header=['Request', 'Year/month/date/time', 'Product', 'Price/GEL', 'Status'],
                           mode='a', index=False)
-            print('Your order has been successfully paid')
+            print(f"Your order {un_number} has been successfully paid\nPlease, take the check")
             exit()
 
     if inp == '0':
