@@ -20,8 +20,8 @@ while True:
     if inp == '2':
         add(requests)
     if inp == '3':
+        print_form4()
         if len(requests) > 0:
-            print_form4()
             print(requests[-1].name, 'was removed from order')
             requests.pop()
         else:
