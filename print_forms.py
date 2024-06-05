@@ -7,6 +7,7 @@ def print_form1():
     print('Press 2 to remove last product')
     print('Press 3 to view order')
     print('Press 4 to pay')
+    print('Press 5 to view menu')
     print('Press 0 to exit')
 
 def print_form2():

@@ -31,3 +31,9 @@ def add(requests):
             break
         else:
             print("Incorrect input, Let's choose a product")
+
+
+def menu(requests):
+    print('Sandwich City Menu:')
+    for i in ChickenSandwich, VeganSandwich, SteakAndCheeseSandwich,TunaSandwich, EggAndCheeseSandwich,Coca_Cola, Fanta:
+        print(f"{i.name}, {i.ingredients}, {i.price} GEL")

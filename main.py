@@ -4,8 +4,8 @@ Spend the saved time on things that are more important to you."""
 
 from print_forms import print_form1,print_form3,print_form4
 from pay import BogPayment, TbcPayment
+from request import add, menu
 from datetime import datetime
-from request import add
 import pandas as pd
 import random
 
@@ -27,7 +27,7 @@ while True:
         print_form3()
         total = 0
         for i in requests:
-            print(i.name, i.ingredients, i.price, 'GEL')
+            print(i.name, i.price, 'GEL')
             total += i.price
         print('Total price:', total, 'GEL')
     if inp == '4':
@@ -55,6 +55,9 @@ while True:
                           mode='a', index=False)
             print(f"Your order {un_number} has been successfully paid\nPlease, take the check")
             exit()
+    if inp == '5':
+        print_form4()
+        menu(requests)
     if inp == '0':
         for request in requests:
             df = pd.DataFrame(
