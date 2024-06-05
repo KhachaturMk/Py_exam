@@ -1,6 +1,7 @@
 from food_adn_drinks import ChickenSandwich, VeganSandwich, SteakAndCheeseSandwich
 from food_adn_drinks import TunaSandwich, EggAndCheeseSandwich, Coca_Cola, Fanta
 from print_forms import print_form2
+import time
 
 def add(requests):
     while True:
@@ -35,5 +36,8 @@ def add(requests):
 
 def menu(requests):
     print('Sandwich City Menu:')
-    for i in ChickenSandwich, VeganSandwich, SteakAndCheeseSandwich,TunaSandwich, EggAndCheeseSandwich,Coca_Cola, Fanta:
+    for i in (ChickenSandwich, VeganSandwich, SteakAndCheeseSandwich,TunaSandwich,
+              EggAndCheeseSandwich,Coca_Cola, Fanta):
+        time.sleep(1.1)
         print(f"{i.name}, {i.ingredients}, {i.price} GEL")
+    time.sleep(3)

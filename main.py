@@ -15,22 +15,25 @@ while True:
     print_form1()
     inp = input('Press here: -> ')
     if inp == '1':
-        add(requests)
+        print_form4()
+        menu(requests)
     if inp == '2':
+        add(requests)
+    if inp == '3':
         if len(requests) > 0:
             print_form4()
             print(requests[-1].name, 'was removed from order')
             requests.pop()
         else:
             print('Your order list is empty')
-    if inp == '3':
+    if inp == '4':
         print_form3()
         total = 0
         for i in requests:
             print(i.name, i.price, 'GEL')
             total += i.price
         print('Total price:', total, 'GEL')
-    if inp == '4':
+    if inp == '5':
         print_form4()
         acc_nummer = input('Enter IBAN account number: -> ')
         if len(requests) > 0 and len(acc_nummer) == 10 and 'GE00TB' in acc_nummer[:6] and acc_nummer[6:].isdigit():
@@ -55,9 +58,6 @@ while True:
                           mode='a', index=False)
             print(f"Your order {un_number} has been successfully paid\nPlease, take the check")
             exit()
-    if inp == '5':
-        print_form4()
-        menu(requests)
     if inp == '0':
         for request in requests:
             df = pd.DataFrame(

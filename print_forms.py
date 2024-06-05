@@ -3,11 +3,11 @@ from food_adn_drinks import TunaSandwich, EggAndCheeseSandwich, Coca_Cola, Fanta
 def print_form1():
     print('_______________________________________________')
     print("Welcome to Sandwich City! Let's start ordering!")
-    print('Press 1 to add product')
-    print('Press 2 to remove last product')
-    print('Press 3 to view order')
-    print('Press 4 to pay')
-    print('Press 5 to view menu')
+    print('Press 1 to view menu')
+    print('Press 2 to add product')
+    print('Press 3 to remove last product')
+    print('Press 4 to view order')
+    print('Press 5 to pay')
     print('Press 0 to exit')
 
 def print_form2():
