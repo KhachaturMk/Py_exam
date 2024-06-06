@@ -4,6 +4,7 @@ from print_forms import print_form2
 import time
 
 
+# function which add new product in request order
 def add(requests):
     while True:
         print_form2()
@@ -35,6 +36,7 @@ def add(requests):
             print("Incorrect input, Let's choose a product")
 
 
+# function for menu details
 def menu(requests):
     print('Sandwich City Menu:')
     for i in (ChickenSandwich, VeganSandwich, SteakAndCheeseSandwich,TunaSandwich,

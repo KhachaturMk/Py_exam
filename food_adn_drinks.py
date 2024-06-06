@@ -1,3 +1,4 @@
+# create main class
 class FoodAndDrinks:
     def __init__(self, name, price, ingredients):
         self.name = name
@@ -5,6 +6,8 @@ class FoodAndDrinks:
         self.ingredients = ingredients
 
 
+# menu objects are created based on the FoodAndDrinks class
+# each object has name, price and ingredients
 ChickenSandwich = FoodAndDrinks('Chicken Sandwich', 10,
                                 '(Chicken strips with Teriyaki glaze with onion sauce)')
 VeganSandwich = FoodAndDrinks('Vegan Sandwich', 11,

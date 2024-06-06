@@ -1,5 +1,7 @@
 import pandas as pd
 
+# this manual must be installed on the restaurant employee's terminal
+# it helps to check order details by unique order number
 inp = input('Request number: ')
 try:
     df = pd.read_csv('report.csv')
