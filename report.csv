@@ -1,0 +1,4 @@
+Request,Year/month/date/time,Product,Price,Status,IBAN
+95687,2024-06-06 12:43:37,Tuna Sandwich,13,BOG_pay,GE00BG5702
+Request,Year/month/date/time,Product,Price,Status,IBAN
+95687,2024-06-06 12:43:37,Coca Cola,2,BOG_pay,GE00BG5702
