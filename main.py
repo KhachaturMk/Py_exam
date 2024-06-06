@@ -1,7 +1,3 @@
-"""This is a touch terminal program for a fast food restaurant.
-You can choose and pay for your order without waiting for a cashier.
-Spend the saved time on things that are more important to you."""
-
 from print_forms import print_form1,print_form3,print_form4
 from pay import BogPayment, TbcPayment
 from request import add, menu
@@ -62,7 +58,7 @@ while True:
         print_form4()
         for request in requests:
             df = pd.DataFrame(
-                [[un_number, datetime.now().replace(microsecond=0), request.name, request.price, 'Not_paid', 'None']])
+                [[un_number, datetime.now().replace(microsecond=0), request.name, request.price, 'Not_paid', '---']])
             df.to_csv('report.csv', header=['Request', 'Year/month/date/time', 'Product', 'Price',
                                             'Status', 'IBAN'], mode='a', index=False)
         print('Order is canceled')
