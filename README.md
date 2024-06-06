@@ -17,7 +17,7 @@ The cashier has the opportunity, to check any order details using a unique order
 This is realized in check.py file, which must be installed on the restaurant employee's terminal.
 
 There are two payment methods in the program, through TBC and BOG banks. 
-You need to enter the IBAN account number, which conditionally consists of 10 characters. 
+You need to enter the IBAN account number, which conditionally consists of 10 characters and starts with GE00. 
 After some validation, you will see a message about successful payment.
 
 Let's start ordering!
